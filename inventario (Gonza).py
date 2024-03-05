@@ -1,20 +1,20 @@
 inventario = []
 
 def agregar_producto():
-    nombre = input("Ingree el nombre del produccto: ")
-    cantidad = int(input("Ingrese la cantidad disponible: "))
-    precio = input("Ingrese el precio del producto: ")
+    nombre = input("ingree el nombre del produccto: ")
+    cantidad = int(input("ingrese la cantidad disponible: "))
+    precio = input("ngrese el precio del producto: ")
     producto = {"nombre": nombre, "cantidad": cantidad, "precio": precio}
     inventario.append(producto)
-    print("Producto agregado al inventario.")
+    print("producto agregado al inventario.")
 
 def actualizar_cantidad():
-    nombre = input("Ingree el nombre del producto que va a atualizar: ")
+    nombre = input("ingree el nombre del producto que va a atualizar: ")
     for producto in inventario:
         if producto["nombre"] == nombre:
-            nuevaCantidad = int(input("Ingrese la nueva cantidad disponible: "))
+            nuevaCantidad = int(input("ingrese la nueva cantidad disponible: "))
             producto["cantidad"] = nuevaCantidad
-            print("Cantidad actualizada.")
+            print("cantidad actualizada.")
             return
     print("El productso no esrta encontrado en inventario")
 
@@ -31,18 +31,19 @@ def eliminar_producto():
 def mostrar_inventario():
     print("Inventario:")
     for producto in inventario:
-        print("Nombre:", producto,"nombre","- Cantidad: ", producto,"cantidad" "- Precio: ", producto,"precio")
+        print( producto)
 
 def buscar_producto():
     nombre = input("Ingrese el nombre del producto a buscar: ")
     for producto in inventario:
         if producto["nombre"] == nombre:
-            print("Nombre:", producto,'nombre',"- Cantidad: ", producto,'cantidad' "- Precio: ", producto,"precio")
+            print(producto)
             return
     print("Producto no encontrado en el inventario")
 
 while True:
-    opcion = int(input("Seleccione una opción:\n1. Agregar producto\n2. Actualizar cantidad\n3. Eliminar producto\n4. Mostrar inventario\n5. Buscar producto\n6. Salir\n"))
+    
+    opcion = int(input("selccione una opción:\n1. agregar poducto\n2. actualizar cantidad\n3. eliminar producto\n4. mostrar inventario\n5. buscar producto\n6. salir\n"))
 
     if opcion == 1:
         agregar_producto()
