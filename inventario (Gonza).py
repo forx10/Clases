@@ -4,7 +4,7 @@ def agregar_producto():
     nombre = input("ingree el nombre del produccto: ")
     cantidad = input("ingrese la cantidad disponible: ")
     precio = input("ngrese el precio del producto: ")
-    producto = {"nombre": nombre, "cantidad": cantidad, "precio": precio}
+    producto = ("nombre": nombre, "cantidad": cantidad, "precio": precio)
     inventario.append(producto)
     print("producto agregado al inventario.")
 
@@ -58,4 +58,4 @@ while True:
     elif opcion == 6:
         break
     else:
-        print("Opción no válida. Por favor, seleccione una opción válida.")
+        print("opción no valida. Por favor, seleccione una opción valida")
