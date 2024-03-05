@@ -2,7 +2,7 @@ inventario = []
 
 def agregar_producto():
     nombre = input("ingree el nombre del produccto: ")
-    cantidad = int(input("ingrese la cantidad disponible: "))
+    cantidad = input("ingrese la cantidad disponible: ")
     precio = input("ngrese el precio del producto: ")
     producto = {"nombre": nombre, "cantidad": cantidad, "precio": precio}
     inventario.append(producto)
@@ -12,7 +12,7 @@ def actualizar_cantidad():
     nombre = input("ingree el nombre del producto que va a atualizar: ")
     for producto in inventario:
         if producto["nombre"] == nombre:
-            nuevaCantidad = int(input("ingrese la nueva cantidad disponible: "))
+            nuevaCantidad = input("ingrese la nueva cantidad disponible: ")
             producto["cantidad"] = nuevaCantidad
             print("cantidad actualizada.")
             return
